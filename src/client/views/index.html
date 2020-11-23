@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="home"></div>
+    <main>
+      <div class="heading">
+        <h1>Sentiment</h1>
+        <h1>Analysis Tool</h1>
+        <h2>
+          Determining whether a piece of writing is positive, negative or
+          neutral and whether the content is subjective or objective.
+        </h2>
+      </div>
+      <form action="" class="form">
+        <select class="form__select">
+          <option disabled selected value></option>
+          <option value="URL">URL</option>
+          <option value="text">text</option>
+        </select>
+        <input type="url" class="form__input" />
+        <textarea class="form__textarea" placeholder="some text..."></textarea>
+        <input type="submit" class="form__submit" value="Get Analysis"/>
+      </form>
+    </main>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

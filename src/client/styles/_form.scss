@@ -1,0 +1,74 @@
+.form {
+  margin: 15px;
+  @include flex(center, center, column);
+
+  &__select {
+    width: 35vw;
+    padding: 5px;
+    border: none;
+    background-color: $primary-color;
+    border: 1px $secondary-color-2 solid;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  &__input {
+    width: 35vw;
+    margin-top: 15px;
+    padding: 5px;
+    border: none;
+    background-color: $primary-color;
+    border: 1px $secondary-color-2 solid;
+    border-radius: 5px;
+    outline: none;
+    display: none;
+  }
+
+  &__textarea {
+    width: 35vw;
+    height: 27vh;
+    margin-top: 15px;
+    padding: 5px;
+    border: none;
+    background-color: $primary-color;
+    border: 1px $secondary-color-2 solid;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    display: none;
+
+    &::placeholder {
+      color: $secondary-color;
+      opacity: 0.7;
+    }
+  }
+
+  &__submit {
+    width: 35vw;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: $secondary-color-2;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 1px $secondary-color-2 inset;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: none;
+    cursor: pointer;
+    color: $primary-color;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0196a3;
+    }
+  }
+
+  @include mobile {
+    &__select,
+    &__input,
+    &__textarea,
+    &__submit {
+      width: 90vw;
+    }
+  }
+}

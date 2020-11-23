@@ -1,0 +1,27 @@
+.heading {
+  margin: 15px;
+  @include flex(center, unset, column);
+
+  & h1 {
+    font-size: 3.7em;
+    color: $accent-color;
+  }
+
+  & h2 {
+    font-size: 1.5em;
+
+    & span {
+      font-size: 1.6em;
+    }
+  }
+
+  @include mobile {
+    & h2 {
+      font-size: 1.2em;
+  
+      & span {
+        font-size: 1.4em;
+      }
+    }
+  }
+}

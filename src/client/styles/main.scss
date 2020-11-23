@@ -1,0 +1,41 @@
+@import "config";
+@import "heading";
+@import "form";
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  height: 100vh;
+  font-family: $primary-font;
+}
+
+.home {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  animation: animatedBackground 30s linear infinite;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  @include flex(space-around, unset, row);
+
+  @include mobile {
+    @include flex(center, center, column);
+  }
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 7112px;
+  }
+}

@@ -1,0 +1,33 @@
+$primary-color: #F7F7F7;
+$secondary-color: #020401;
+$secondary-color-2:#01A9B9;
+$accent-color: #D4030E;
+
+$mobile: 800px;
+
+$primary-font: Candara, sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: $secondary-color;
+}
+
+html, body {
+  height: 100%;
+}
+
+@mixin flex($justify-content, $align-items, $flex-direction) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
