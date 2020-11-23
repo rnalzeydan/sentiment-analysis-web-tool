@@ -16,7 +16,7 @@ const formHandler = (event) => {
         setReqBody()
 
         // fetch data from the server
-        fetch('http://localhost:3000/', {
+        fetch('/', {
             method: "POST",
             credentials: "same-origin",
             headers: {
